@@ -1,0 +1,45 @@
+.nav{
+    padding: 28px 0;
+}
+.logo{
+    font-size: 18px;
+    font-family:'Merriweather',serif;
+    font-weight: bold;
+    letter-spacing: 5px;
+    a{
+        color: #555;
+        transition: all 0.4s ease-in-out;
+        // padding-right: 22px;
+        // padding-left: 22px;
+        &:hover{
+            text-decoration: none;
+            color: #bfba55 !important;
+        }
+    }
+   
+}
+.links{
+    padding-right: 22px;
+    padding-left: 22px;
+    ul{
+        margin-bottom: 0;}
+        li{
+            padding-right: 20px;
+            padding-left: 20px;}
+            a{
+                color: #777777;
+                font-size: 15px;
+                padding-right: 22px;
+                padding-left: 22px;
+                &:hover{
+                    color: $primary-color;
+                    text-decoration: none;
+                }
+            }
+        }
+    
+
+div.links ul.list-inline li.active a{
+    color: $primary-color;
+    
+}

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion</title>
+    <link rel="stylesheet" href="bootstrap/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+<style type="text/css">
+  alert{
+    margin-top: 300%;
+    text-align: center;
+    font-size: 20px;
+  }
+</style>
+</head>
+<body>
+
+<dialog id="favDialog">
+  <form method="dialog">
+    <p><label>Choose Count
+      <select>
+    
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+      </select>
+    </label></p>
+    <menu>
+      <button value="cancel">Cancel</button>
+      <button id="confirmBtn" value="default">Confirm</button>
+    </menu>
+  </form>
+</dialog>
+
+<menu>
+  <!-- <button id="updateDetails">Buy</button> -->
+  <div class="fashion">
+        <div class="title">Fashion Dress</div>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <img src="images/img1.jpg" alt="fashion1" class="img-fluid">
+                <div class="cost">$25000
+                    <div><button class="btn btn-primary" id="updateDetails">Buy Now</button></div>
+
+
+                </div>
+            </div>
+            <div class="col">
+                <img src="images/img2.jpg" alt="fashion2" class="img-fluid">
+                <div class="cost">$29000
+                    <div><button class="btn btn-primary" id="btn">Buy Now</button></div>
+                </div>
+            </div>
+            <div class="col">
+                <img src="images/img3.jpg" alt="fashion3" class="img-fluid">
+                <div class="cost">$37000
+                    <div><button class="btn btn-primary" id="btn">Buy Now</button></div>
+                    </div>
+            </div>
+            <div class="col">
+                <img src="images/img4.jpg" alt="fashion4" class="img-fluid">
+                <div class="cost">$25000
+                    <div><button class="btn btn-primary" id="btn">Buy Now</button></div>
+                </div>
+            </div>
+            <div class="col">
+                <img src="images/img5.jpg" alt="fashion5" class="img-fluid">
+                <div class="cost">$33000
+                    <div><button class="btn btn-primary" id="btn">Buy Now</button></div>
+                    </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <img src="images/img6.jpg" alt="fashion6" class="img-fluid">
+                <div class="cost">$34000
+                    <div><button class="btn btn-primary" id="btn">Buy Now</button></div>
+                </div>
+            </div>
+            <div class="col">
+                <img src="images/img7.jpg" alt="fashion7" class="img-fluid">
+                <div class="cost">$21000
+                    <div><button class="btn btn-primary" id="btn">Buy Now</button></div>
+                 </div>
+            </div>
+            <div class="col">
+                <img src="images/img8.jpg" alt="fashion8" class="img-fluid">
+                <div class="cost">$43000
+                    <div><button class="btn btn-primary" id="btn">Buy Now</button></div>
+                </div>
+            </div>
+            <div class="col">
+                <img src="images/img9.jpg" alt="fashion9" class="img-fluid">
+                <div class="cost">$23300
+                    <div><button class="btn btn-primary" id="btn">Buy Now</button></div>
+                </div>
+            </div>
+            <div class="col">
+                <img src="images/img10.jpg" alt="fashion10" class="img-fluid">
+                <div class="cost">$29000
+                    <div><button class="btn btn-primary" id="btn">Buy Now</button></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>  
+</menu>
+
+<output aria-live="polite"></output>
+<script type="text/javascript">
+var updateButton = document.getElementById('updateDetails');
+var favDialog = document.getElementById('favDialog');
+var outputBox = document.querySelector('output');
+var selectEl = document.querySelector('select');
+var confirmBtn = document.getElementById('confirmBtn');
+
+// "Update details" button opens the <dialog> modally
+updateButton.addEventListener('click', function onOpen() {
+  if (typeof favDialog.showModal === "function") {
+    favDialog.showModal();
+  } else {
+    alert("The <dialog> API is not supported by this browser");
+  }
+});
+// "Favorite animal" input sets the value of the submit button
+selectEl.addEventListener('change', function onSelect(e) {
+  confirmBtn.value = selectEl.value;
+});
+// "Confirm" button of form triggers "close" on dialog because of [method="dialog"]
+favDialog.addEventListener('close', function onClose() {
+  // outputBox.value = favDialog.returnValue + " button clicked - " + (new Date()).toString();
+  // outputBox.value="total Amount is "+favDialog.returnValue*10000;
+alert(outputBox.value="Total Cost is " +favDialog.returnValue*25000+"$");
+});
+
+  
+</script>
+
+</body>
+<script src="jquery.min.js"></script>
+</html>
